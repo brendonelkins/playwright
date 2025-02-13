@@ -9,7 +9,7 @@ test("file upload", async ({ page }) => {
   await page
     .locator("#file_upload")
     .setInputFiles(
-      "/Users/brendonelkins/Documents/playwright/image-files/x3fq5nt7ip0a1.jpg"
+      "./image-files/x3fq5nt7ip0a1.jpg"
     );
   await page.getByRole("button", { name: "Submit" }).click();
   await expect(page.locator("#file_upload_response")).toContainText(
